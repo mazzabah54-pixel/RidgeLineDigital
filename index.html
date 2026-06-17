@@ -1,7 +1,8 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,7 +14,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -21,6 +26,7 @@ body{
     color:white;
     line-height:1.6;
 }
+
 nav{
     position:fixed;
     top:0;
@@ -41,13 +47,6 @@ nav{
     align-items:center;
 }
 
-.logo{
-    color:white;
-    font-size:1rem;
-    font-weight:800;
-    letter-spacing:3px;
-}
-
 .nav-links{
     display:flex;
     list-style:none;
@@ -65,20 +64,6 @@ nav{
     color:#5fb7ff;
 }
 
-@media(max-width:700px){
-
-    .nav-container{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    .nav-links{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-}
 header{
     height:100vh;
     display:flex;
@@ -100,21 +85,22 @@ header{
 }
 
 .hero h1{
-    font-size: 5rem;
-    font-weight: 800;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #ffffff, #7dc4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
+    font-size:5rem;
+    font-weight:800;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    background:linear-gradient(to right, #ffffff, #7dc4ff);
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:15px;
 }
-
 
 .hero p{
     font-size:1rem;
     letter-spacing:1px;
     color:#ddd;
+    margin-bottom:20px;
 }
 
 .btn{
@@ -185,23 +171,38 @@ footer{
 
 @media(max-width:700px){
 
-.hero h1{
-    font-size:2.5rem;
-}
+    .nav-container{
+        padding:14px 20px;
+    }
 
-.hero p{
-    font-size:1rem;
-}
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:0.9rem;
+    }
 
+    header{
+        padding:90px 20px 40px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+        letter-spacing:4px;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
 }
 
 </style>
 </head>
 
 <body>
+
 <nav>
     <div class="nav-container">
-
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -210,12 +211,13 @@ footer{
         </ul>
     </div>
 </nav>
+
 <header>
     <div class="hero">
-        <h1>RIDGELINE<br> DIGITAL</h1>
+        <h1>RIDGELINE<br>DIGITAL</h1>
 
         <p>
-            Affordable Websites For Australian Small Businesses
+            Affordable Websites for Australian Small Businesses
         </p>
 
         <a href="#portfolio" class="btn">View My Work</a>
@@ -224,11 +226,11 @@ footer{
 
 <div class="container">
 
-<section class="card">
+<section class="card" id="about">
     <h2>About Me</h2>
 
     <p>
-        I'm a Victoria-based web designer creating modern,
+        I'm a Victorian-based web designer creating modern,
         professional websites for small businesses, tradies,
         contractors and local services.
     </p>
@@ -237,17 +239,27 @@ footer{
 
     <p>
         My focus is simple: build clean websites that help
-        businesses attract customers and generate enquiries.
+        businesses attract customers, generate enquiries and strengthen my web design portfolio.
     </p>
 </section>
 
 <section class="card">
     <h2>What I Do</h2>
 
-    <p>✔ Business Websites</p>
-    <p>✔ Tradie Websites</p>
+    <p>
+        RidgeLine Digital specialises in creating modern, responsive websites
+        for Australian small businesses, tradies and contractors.
+    </p>
+
+    <br>
+
+    <p>✔ Custom Business Websites</p>
+    <p>✔ Tradie & Service-Based Websites</p>
+    <p>✔ Mobile & Tablet Optimisation</p>
     <p>✔ Portfolio Websites</p>
-    <p>✔ Website Updates</p>
+    <p>✔ Website Updates & Improvements</p>
+    <p>✔ Affordable Web Solutions</p>
+    <p>✔ Hosting & Domain Guidance</p>
 </section>
 
 <section class="card" id="portfolio">
@@ -257,27 +269,60 @@ footer{
     <div class="portfolio">
 
         <div class="project">
-            <img src="shed-project.jpg" alt="Northern Shed Solutions">
+            <img src="NorthernSheds.jpg" alt="Northern Shed Solutions website">
 
             <h3>Northern Shed Solutions</h3>
 
             <p>
-                Complete website design for a Victorian shed,
-                barn and carport installation business.
+                A modern one-page website built for a Victorian shed, barn and carport
+                installation business. Includes a hero banner, service sections,
+                project gallery, Facebook link and click-to-call buttons.
             </p>
+
+            <p>
+                ✔ Mobile friendly<br>
+                ✔ Built with HTML & CSS<br>
+                ✔ Hosted with GitHub Pages<br>
+                ✔ Live business website
+            </p>
+
+            <a href="https://mazzabah54-pixel.github.io/northern-shed-solutions/"
+               class="btn"
+               target="_blank">
+               View Website
+            </a>
         </div>
 
     </div>
 
 </section>
 
-<section class="card">
+
+<section class="card" id="contact">
 
     <h2>Contact</h2>
 
-    <p>Email: your@email.com</p>
+    <p>
+        📞 <a href="tel:0448038697">0448 038 697</a>
+    </p>
+
+    <br>
+
+    <p>
+        📧 <a href="mailto:jtball2010@hotmail.com">
+        jtball2010@hotmail.com
+        </a>
+    </p>
+
+    <br>
+
+    <p>
+        📍 Victoria, Australia
+    </p>
 
 </section>
+
+
 
 </div>
 
@@ -287,4 +332,4 @@ footer{
 
 </body>
 </html>
-```
+
