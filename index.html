@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RidgeLineDigital</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+    line-height:1.6;
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:1rem;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#5fb7ff;
+}
+
+@media(max-width:700px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+header{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.7)
+        ),
+        url("banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero h1{
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffffff, #7dc4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+
+.hero p{
+    font-size:1rem;
+    letter-spacing:1px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:black;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:bold;
+    margin:5px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.card{
+    background:#151515;
+    border:1px solid #2d2d2d;
+    border-radius:15px;
+    padding:35px;
+    margin-bottom:30px;
+}
+
+h2{
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:#1f1f1f;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #333;
+}
+
+.project img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project h3{
+    padding:15px;
+}
+
+.project p{
+    padding:0 15px 20px;
+    color:#cccccc;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #333;
+    color:#999;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+<nav>
+    <div class="nav-container">
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<header>
+    <div class="hero">
+        <h1>RIDGELINE<br> DIGITAL</h1>
+
+        <p>
+            Affordable Websites For Australian Small Businesses
+        </p>
+
+        <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+</header>
+
+<div class="container">
+
+<section class="card">
+    <h2>About Me</h2>
+
+    <p>
+        I'm a Victoria-based web designer creating modern,
+        professional websites for small businesses, tradies,
+        contractors and local services.
+    </p>
+
+    <br>
+
+    <p>
+        My focus is simple: build clean websites that help
+        businesses attract customers and generate enquiries.
+    </p>
+</section>
+
+<section class="card">
+    <h2>What I Do</h2>
+
+    <p>✔ Business Websites</p>
+    <p>✔ Tradie Websites</p>
+    <p>✔ Portfolio Websites</p>
+    <p>✔ Website Updates</p>
+</section>
+
+<section class="card" id="portfolio">
+
+    <h2>Portfolio</h2>
+
+    <div class="portfolio">
+
+        <div class="project">
+            <img src="shed-project.jpg" alt="Northern Shed Solutions">
+
+            <h3>Northern Shed Solutions</h3>
+
+            <p>
+                Complete website design for a Victorian shed,
+                barn and carport installation business.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="card">
+
+    <h2>Contact</h2>
+
+    <p>Email: your@email.com</p>
+
+</section>
+
+</div>
+
+<footer>
+    <p>© 2026 RidgeLine Digital</p>
+</footer>
+
+</body>
+</html>
+```
